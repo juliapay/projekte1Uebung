@@ -1,0 +1,57 @@
+documentation Projekte Uebung
+
+CLASSES AND METHODS
+
+-Figure (basis-class)
+        +toString
+        +Constructor
+        -char[][] symbol
+        -int arraysize
+
+    -Inherited Classes from Figure
+        -FigureH
+        -FigureL
+        -FigureI
+        -FigureO
+        -FigureO2
+        -FigureMinus
+                    +constructor
+                         size
+                         initialize array with size
+                                        App updateState()
+
+
+-App
+    -initialize()
+
+    -readUserInput()
+        executes
+            inputFigure()
+
+    -updateState()
+        executes
+        Scanner input for
+            switch-statement for size
+
+    -printState()
+        executes
+            if-condition for output in console
+
+    -inputFigure()
+        executes
+            do-while-loop for
+                            -input Figure-selection
+                            -exit input
+                            -exception wrong input
+
+-Main
+     -(public static void)
+        -initialize Scanner
+        -initialize App-class
+                -calls method Run
+        -closes scanner
+        -print out closing statement
+
+--------------------------------------------------------
+TESTING
+
