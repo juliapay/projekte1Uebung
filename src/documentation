@@ -3,12 +3,20 @@ documentation Projekte Uebung
 CLASSES AND METHODS
 
 -Figure (basis-class)
+Die abstrakte Klasse Figure definiert eine abstrakte geometrische Figur.
+Superklasse für alle figureklassen
+Diese Klasse enthält Eigenschaften und Methoden, die von allen abgeleiteten Figuren gemeinsam genutzt werden.
+
         +toString
         +Constructor
         -char[][] symbol
         -int arraysize
 
     -Inherited Classes from Figure
+
+Die Figuren der Klassen Figure* bestehen aus vertikalen und horizontalen Linien von 'X'-Symbolen, die je nach Größe variiert.
+Die Klassen erben von der abstrakten Klasse "Figure" und implementieren die spezifischen Eigenschaften und Methoden für die Figure*.
+
         -FigureH
         -FigureL
         -FigureI
@@ -22,6 +30,10 @@ CLASSES AND METHODS
 
 
 -App
+Die Klasse "App" stellt eine Anwendung dar, die dem Benutzer ermöglicht, geometrische Figuren auszuwählen und anzuzeigen.
+Die Klasse implementiert eine Benutzerschnittstelle über die Konsole.
+Die Klasse beinhaltet Methoden zum Initialisieren der Anwendung, zum Einlesen von Benutzereingaben, zur Aktualisierung des Anwendungszustands und zum Anzeigen des aktuellen Zustands.
+
     -initialize()
 
     -readUserInput()
@@ -32,6 +44,7 @@ CLASSES AND METHODS
         executes
         Scanner input for
             switch-statement for size
+
 
     -printState()
         executes
@@ -45,6 +58,10 @@ CLASSES AND METHODS
                             -exception wrong input
 
 -Main
+Die Klasse "Main" enthält die Hauptmethode des Programms, die den Einstiegspunkt darstellt.
+Sie initialisiert die Anwendung, indem sie eine Instanz der Klasse "App" erstellt und die "Run" Methode aufruft, um die Benutzerschnittstelle zu starten.
+Nachdem die Benutzerschnittstelle beendet wurde, wird die Eingabequelle geschlossen und eine Abschlussmeldung wird ausgegeben.
+
      -(public static void)
         -initialize Scanner
         -initialize App-class
@@ -54,4 +71,93 @@ CLASSES AND METHODS
 
 --------------------------------------------------------
 TESTING
+Testfall: Gültige Figur und Größe:
 
+Eingabe: Geben Sie eine gültige Figur (1-6) und eine gültige Größe (1-3) ein.
+Erwartetes Ergebnis: Die Figur sollte in der gewählten Größe auf der Konsole angezeigt werden.
+Testfall: Ungültige Figur:
+
+Eingabe: Geben Sie eine ungültige Figur (<1 oder >6) ein.
+Erwartetes Ergebnis: Das Programm sollte Sie auffordern, eine gültige Figur einzugeben.
+Testfall:
+        Ungültige Größe:9  Ausgabe: Dies ist keine gültige Grafik!
+        Ungültige Größe:-1  Ausgabe: Dies ist keine gültige Grafik!
+Eingabe: Geben Sie eine ungültige Größe (<1 oder >3) ein.
+Erwartetes Ergebnis: Das Programm sollte Sie auffordern, eine gültige Größe einzugeben.
+Testfall:
+        Ungültige Größe:r  Programm springt zurück zum Hauptmenü
+
+Eingabe: Geben Sie 7 ein, wenn Sie nach einer Figur gefragt werden.
+Erwartetes Ergebnis: Das Programm sollte beendet werden und die Konsole geschlossen werden.
+Testfall:
+            Eingabe: 7  Ausgabe: Das Programm wird beendet ...
+
+Eingabe: Testen Sie die Grenzfälle, indem Sie 1 oder 3 als Figur und Größe eingeben.
+Erwartetes Ergebnis: Die Figur sollte in der gewählten Größe auf der Konsole angezeigt werden.
+Testfall:
+           Eingabe: 1
+           Eingabe: 1
+           Ausgabe: X X
+                    XXX
+                    X X
+
+           Eingabe: 2
+           Eingabe: 2
+           Ausgabe: XX
+                    XX
+                    XX
+                    XX
+                    XX
+                    XXXXXX
+
+           Eingabe: 4
+           Eingabe: 3
+           Ausgabe:     XXX
+                      X     X
+                      X     X
+                      X     X
+                      X     X
+                      X     X
+                      X     X
+                      X     X
+                        XXX
+
+                     Welche Grafik möchten Sie anzeigen (1-6)
+                     Drücken sie 7 für Exit
+
+
+--------------------------------------------------------
+MANUAL
+
+Starten des Programms:
+Um das Programm zu starten, führen Sie die Datei "App" aus.
+Das Programm wird dann die Konsole öffnen und auf Benutzereingaben warten.
+
+Auswahl der Figur:
+Das Programm wird Sie auffordern, eine Figur auszuwählen, indem Sie eine Zahl zwischen 1 und 6 eingeben.
+Die verfügbaren Figuren sind:
+
+1: Figur H
+2: Figur L
+3: Figur O
+4: Figur O2
+5: Figur I
+6: Figur Minus
+
+Auswahl der Größe:
+Nachdem Sie eine Figur ausgewählt haben, werden Sie aufgefordert, eine Größe für die Figur auszuwählen.
+Die verfügbaren Größen sind:
+
+1: Kleine Figur
+2: Mittlere Figur
+3: Große Figur
+
+Anzeige der Figur:
+Nachdem Sie eine Figur und eine Größe ausgewählt haben, wird die Figur in der gewählten Größe auf der Konsole angezeigt.
+
+Beenden des Programms:
+Wenn Sie das Programm beenden möchten, geben Sie 7 ein, wenn Sie nach einer Figur gefragt werden.
+Das Programm wird dann beendet und die Konsole geschlossen.
+
+Hinweis:
+Wenn Sie eine ungültige Figur oder Größe eingeben, wird das Programm Sie auffordern, eine gültige Eingabe zu tätigen.

@@ -21,23 +21,8 @@ public abstract class Figure {
                 }
                 sb.append('\n');
             }
-
             return sb.toString();
-
     }
-
-    public char getSize() {
-        return size;
-    }
-
-    public void setSize(char size) {
-        this.size = size;
-    }
-
-    public int getArraysize() {
-        return arraysize;
-    }
-
     public void setArraysize(int arraysize) {
         this.arraysize = arraysize;
     }

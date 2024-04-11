@@ -24,7 +24,7 @@ public class FigureI extends Figure {
             symbol = new char[arraysize][arraysize];
             for (int row = 0; row < arraysize; row++) {
                 for (int col = 0; col < arraysize; col++) {
-                    if (col > 1 || 4 < col) {
+                    if (col > 2 || 3 < col) {
                         symbol[col][row] = 'X';
                     } else {
                         symbol[col][row] = ' ';
@@ -37,7 +37,7 @@ public class FigureI extends Figure {
             symbol = new char[arraysize][arraysize];
             for (int row = 0; row < arraysize; row++) {
                 for (int col = 0; col < arraysize; col++) {
-                    if (col > 2 || 6 < col) {
+                    if (col > 3 || 5 < col) {
                         symbol[col][row] = 'X';
                     } else {
                         symbol[col][row] = ' ';
